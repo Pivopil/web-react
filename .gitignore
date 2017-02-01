@@ -12,3 +12,4 @@
 hs_err_pid*
 /.idea/
 /web-react.iml
+/node_modules/
