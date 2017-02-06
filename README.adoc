@@ -1,0 +1,25 @@
+= Web React
+React Front End Client for * https://github.com/Pivopil/spring-boot-oauth2-rest-service-password-encoding.git[Spring Boot Oauth2 REST Server]
+
+== Projects
+* https://github.com/facebook/react[React]
+
+== Release Notes
+=== v1.0 (current)
+- Task 1.1 Initial configuration
+- Task 1.2 Configure components * https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[Implement High-Order components]
+
+== Integrate FE and BE
+* https://stackoverflow.com/questions/5009324/node-js-nginx-what-now[Using Nginx as FE server]
+* https://github.com/eirslett/frontend-maven-plugin[Frontend Maven Plugin]
+
+== Build
+
+```sh
+git clone https://github.com/Pivopil/web-react.git
+cd web-react
+npm i
+cd src
+npm start
+```
+
