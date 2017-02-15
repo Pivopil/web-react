@@ -1,6 +1,6 @@
 = Web React
 
-React Front End Client for * https://github.com/Pivopil/spring-boot-oauth2-rest-service-password-encoding.git[Spring Boot Oauth2 REST Server]
+React Front End Client for https://github.com/Pivopil/spring-boot-oauth2-rest-service-password-encoding.git[Spring Boot Oauth2 REST Server]
 
 == Projects
 
@@ -10,8 +10,9 @@ React Front End Client for * https://github.com/Pivopil/spring-boot-oauth2-rest-
 
 === v1.0 (current)
 
-- Task 1.1 Initial configuration
-- Task 1.2 Configure components * https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[Implement High-Order components]
+- Task 1.1 (Done) Initial configuration
+- Task 1.2 (Done) Add store
+- Task 1.3 Configure components https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[High-Order components]
 
 == Integrate FE and BE
 

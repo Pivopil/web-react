@@ -1,29 +1,31 @@
 import ReactDOM from "react-dom";
 import React, {Component} from "react";
-import window from "global/window";
 import document from "global/document";
+import {connect, Provider} from "react-redux";
+import {asyncConnect} from "redux-async-connect";
+import {createStore} from "./createStore";
+import './styles/main.scss';
 
-// import ComplexChartExample from './complex-chart-example';
-// import '../../src/styles/examples.scss';
+const store = createStore();
 
+@connect(
+    state => ({
+
+    }), dispatch => ({
+        dispatchAction: dispatch
+    }))
 export default class App extends Component {
-    componentWillMount() {
-        window.addEventListener(
-            'resize',
-            () => this.setState({width: window.innerWidth})
-        );
-    }
-
     render() {
         return (
-            <article>
+            <div>
                 <h1>Simple Complex Chart Example</h1>
-                <section>
+                <span>
                     Hello!!!
-                </section>
-            </article>
+                </span>
+            </div>
         );
     }
 }
 
-ReactDOM.render(<App />, document.querySelector('#index'));
+
+ReactDOM.render(<Provider store={store}><App /></Provider>, document.querySelector('#index'));
