@@ -12,7 +12,10 @@ React Front End Client for https://github.com/Pivopil/spring-boot-oauth2-rest-se
 
 - Task 1.1 (Done) Initial configuration
 - Task 1.2 (Done) Add store
-- Task 1.3 Configure components https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[High-Order components]
+- Task 1.3 (Done) Add router
+
+
+- Configure components https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[High-Order components]
 
 == Integrate FE and BE
 

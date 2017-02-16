@@ -2,30 +2,24 @@ import ReactDOM from "react-dom";
 import React, {Component} from "react";
 import document from "global/document";
 import {connect, Provider} from "react-redux";
-import {asyncConnect} from "redux-async-connect";
+import {asyncConnect, ReduxAsyncConnect} from "redux-async-connect";
 import {createStore} from "./createStore";
-import './styles/main.scss';
+import "./styles/main.scss";
+import {Router, hashHistory} from "react-router";
+import {syncHistoryWithStore} from "react-router-redux";
+import getRoutes from "./router";
 
-const store = createStore();
+const store = createStore(hashHistory);
+const history = syncHistoryWithStore(hashHistory, store);
 
-@connect(
-    state => ({
-
-    }), dispatch => ({
-        dispatchAction: dispatch
-    }))
-export default class App extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Simple Complex Chart Example</h1>
-                <span>
-                    Hello!!!
-                </span>
-            </div>
-        );
-    }
-}
+const routers = (
+    <Router history={history} render={(props) =>
+        <ReduxAsyncConnect {...props} filter={item => !item.deferred}/>}>
+        {getRoutes()}
+    </Router>
+);
 
 
-ReactDOM.render(<Provider store={store}><App /></Provider>, document.querySelector('#index'));
+
+
+ReactDOM.render(<Provider store={store} >{routers}</Provider>, document.querySelector('#index'));
