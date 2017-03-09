@@ -5,16 +5,18 @@ import {connect, Provider} from "react-redux";
 import {asyncConnect, ReduxAsyncConnect} from "redux-async-connect";
 import {createStore} from "./createStore";
 import "./styles/main.scss";
+import HttpClient from './httpClient';
 import {Router, hashHistory} from "react-router";
 import {syncHistoryWithStore} from "react-router-redux";
 import getRoutes from "./router";
 
-const store = createStore(hashHistory);
+const client = new HttpClient();
+const store = createStore(hashHistory, client);
 const history = syncHistoryWithStore(hashHistory, store);
 
 const routers = (
     <Router history={history} render={(props) =>
-        <ReduxAsyncConnect {...props} filter={item => !item.deferred}/>}>
+        <ReduxAsyncConnect helpers={{client}} {...props} filter={item => !item.deferred}/>}>
         {getRoutes()}
     </Router>
 );
