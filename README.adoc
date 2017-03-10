@@ -19,6 +19,7 @@ React Front End Client for https://github.com/Pivopil/spring-boot-oauth2-rest-se
 
 
 - Configure components https://medium.com/@franleplant/react-higher-order-components-in-depth-cf9032ee6c3e#.pmikpf8u6[High-Order components]
+- Configure saga https://github.com/redux-saga/redux-saga-beginner-tutorial/blob/sagas/main.js
 
 == Integrate FE and BE
 

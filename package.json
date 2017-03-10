@@ -2,6 +2,8 @@
   "description": "React UI",
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babelify": "^7.3.0",
     "bootstrap": "^3.3.7",
     "immutable": "^3.8.1",
     "normalizr": "^3.2.1",
